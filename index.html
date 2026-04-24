@@ -466,6 +466,148 @@
   </div>
 </div>
 
+<!-- FAQ SECTION -->
+<div style="background:linear-gradient(180deg,#0d0d0d 0%,#111 100%);padding:80px 0 90px;">
+  <div style="max-width:860px;margin:0 auto;padding:0 32px;">
+    <div class="section-header">
+      <div class="section-label">Have Questions?</div>
+      <h2 class="section-title" style="color:var(--white);">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know before bringing the Fusion Demo Kit to your next client meeting.</p>
+    </div>
+
+    <div id="faq-list" style="margin-top:48px;display:flex;flex-direction:column;gap:12px;">
+
+      <!-- Q1 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>What's included in the Fusion Solution Demo Kit?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          The kit ships with one <strong>Fusion 2.5G Gateway</strong> (with built-in Omada controller), one <strong>PoE+ Switch</strong>, and one <strong>Wi-Fi 7 Access Point</strong> — pre-configured as a working network out of the box. You choose the AP and switch combination at checkout to match your demo scenario. All devices are retail-grade hardware, identical to what you'd deploy at a client site.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>Do I need a separate Omada controller or cloud account?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          No. The Fusion 2.5G gateway has a <strong>built-in hardware controller</strong> that manages all devices in the kit. There's no need for a separate OC200/OC300 controller, a Raspberry Pi, or a cloud subscription. You can optionally connect to Omada Cloud for remote management, but it's entirely optional for the demo.
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>How is the Demo Kit priced vs. buying devices separately?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          The kit is bundled at <strong>20% off retail</strong>. Buying each device individually would cost more and require separate configuration. The kit price also reflects the demo-oriented support and documentation package that comes with it — including this deployment guide, the setup video, and priority technical support access.
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>Can the Demo Kit be converted into a production deployment?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          Yes — and that's the point. Every device in the kit is <strong>full production hardware</strong>. When a client approves the deployment, you can leave the demo kit in place and expand from there, or use the identical SKUs for the production order. No re-configuration needed — just adopt more devices into the same Omada controller.
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>How many APs and switches can the Fusion 2.5G support?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          The Fusion 2.5G controller supports up to <strong>100 Omada devices</strong> (APs + switches combined) in a single site. For multi-site deployments, each site runs its own controller instance, all manageable from one Omada Cloud dashboard. This makes the kit a credible demo for everything from a 10-person office to a multi-floor enterprise or multi-branch retail chain.
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>What's the setup time for a live demo?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          From unboxing to a fully operational demo network takes <strong>under 15 minutes</strong>. The Fusion gateway uses Bluetooth-based discovery via the Omada app — no static IP setup, no web UI login required. The access point and switch are auto-adopted by the controller. Watch the setup walkthrough video above for the full step-by-step.
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <span>Is technical support included with the Demo Kit?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          Yes. Demo Kit purchasers receive access to <strong>dedicated pre-sales technical support</strong> via the Omada Discord channel and a direct contact line for integrators. If you hit a configuration issue during a client presentation, our team can assist in real time. Post-purchase, all devices carry the standard Omada 3-year hardware warranty.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .faq-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .faq-item:hover { border-color: rgba(0,225,148,0.35); }
+  .faq-item.open { border-color: rgba(0,225,148,0.6); }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    gap: 16px;
+  }
+  .faq-arrow {
+    color: #00e194;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+    display: inline-block;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    display: none;
+    padding: 0 28px 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.65);
+  }
+  .faq-item.open .faq-a { display: block; }
+  .faq-a strong { color: #00e194; font-weight: 700; }
+</style>
+
+<script>
+  function toggleFaq(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+</script>
+
 <footer>
   <strong>Omada by TP-Link</strong> · Fusion Solution Demo Kit<br>
   <a href="#">omadanetwork.com</a> · <a href="https://discord.gg/omada">Discord Support</a> · <a href="#">Contact Sales</a><br><br>
